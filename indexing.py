@@ -9,7 +9,8 @@ from langchain_qdrant import QdrantVectorStore
 load_dotenv()
 
 
-pdf_path=Path(__file__).parent/"thinkpython2.pdf"
+
+pdf_path=Path(__file__).parent/"cheese.pdf"
 
 # load this file in python program
 loader=PyPDFLoader(file_path=pdf_path)
@@ -25,13 +26,13 @@ chunks=text_splitter.split_documents(documents=docs)
 
 # vector embedding using Google's embedding model
 embedding_model=GoogleGenerativeAIEmbeddings(
-    model="gemini-embeddings-001")
+    model="gemini-embedding-001")
 
 vector_db=QdrantVectorStore.from_documents(
     documents=chunks,
     embedding=embedding_model,
     url="http://localhost:6333",
-    collection_name="RAG"
+    collection_name="Book"
 )
 
 print("Indexing of documents done ....")
