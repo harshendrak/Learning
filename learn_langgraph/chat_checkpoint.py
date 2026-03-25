@@ -52,7 +52,7 @@ with MongoDBSaver.from_conn_string(DB_URI) as checkpointer:
  
     for chunk in graph_with_checkpointer.stream(
         {"messages":[input("input message")]},
-        config,
+        config,#type: ignore
         stream_mode="values"
     ):
         chunk["messages"][-1].pretty_print()
