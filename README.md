@@ -1,3 +1,5 @@
+
+```markdown
 # Agentic AI Learning 🤖
 
 Welcome to my learning repository for **Agentic AI**! This project serves as a personal workspace where I practice, implement, and document all the concepts and techniques I am learning about AI agents, orchestration, and Retrieval-Augmented Generation (RAG).
@@ -41,3 +43,26 @@ To explore or run the code in this repository locally:
    ```bash
    git clone [https://github.com/harshendrak/Learning.git](https://github.com/harshendrak/Learning.git)
    cd Learning
+   ```
+
+2. **Set up a virtual environment (recommended):**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use: venv\Scripts\activate
+   ```
+
+3. **Install necessary dependencies:**
+   Depending on the script you want to run, you may need to install standard AI packages:
+   ```bash
+   pip install langchain langgraph openai 
+   ```
+
+4. **Set up Environment Variables:**
+   To run the agent scripts, you will need access to LLM APIs. Create a `.env` file in the root directory and add your keys:
+   ```env
+   OPENAI_API_KEY=your_api_key_here
+   ```
+
+## 🤝 Purpose & Feedback
+This is primarily a personal learning repository to track my journey into Agentic AI. While it is not designed as an open-source library for public consumption, feedback, code reviews, or suggestions on better Agentic AI design patterns are always welcome! Feel free to open an issue if you want to discuss a specific implementation.
+```
